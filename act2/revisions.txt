@@ -1,0 +1,79 @@
+commit d3a139b14126c0dff8877393e1ca4b70c2ebe592
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 21:31:12 2021 -0400
+
+    FInal version. Working perfectly now. Fixed an error with my
+    initialization, now everything is as it should be. GG - John Skorcik
+
+commit 92f3e3a2040c41766319159e9c1f41c8b6fa82ea
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 19:30:47 2021 -0400
+
+    Fixed huge bug with code in my neighbor check. NOW IT WORKS ALL
+    PERFECTLY. Commented things out that were made to make it more nice for
+    personal reasons (like an alive organism tracker). Updated by function
+    documentation to make them publishable. Also did that with some
+    comments. Fun stuff.
+
+commit d69f412d92c6608734e4949f1dece5c6f465df4a
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 19:16:48 2021 -0400
+
+    Algorithm is corrected. Conway's game runs. Documentation added for
+    functions. Cleaned up code. Removed the excess rules methods due to my
+    central conway function doing everything they do, but better. I want to
+    add a tracker that keeps a numerical count of the number of organisms
+    still alive. Otherwise, basically everything is done :)
+
+commit d175fe36640f3c8c9207a2c8757797a6fca9eb1e
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 18:47:20 2021 -0400
+
+    B3 is complete. Accurately calculates the neighbors.Updated more code
+    and syntax to be more styled.
+
+commit f75925fae49a750fdc66378212a9d83395c16e40
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 17:34:12 2021 -0400
+
+    B2 is complete. Completed it with B1 accidentally, so I just updated all
+    the syntax to be more MY style of coding. Looks way cleaner now. Removed
+    some redundant comments, just cleaned up alot.
+
+commit c4c14fa8e9121ed7db4608fc979e1a475dbb5b06
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 17:25:22 2021 -0400
+
+    Part B1 complete. Fixed the paramter declarations, and updated the code
+    to properly use a 'size' variable.
+
+commit 6e9eaaa624393ab45312aaf9963a425196866f7c
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 17:16:20 2021 -0400
+
+    Added comments, method descriptions, cleaned up some lines of code.
+
+commit c625f73c57cdd6cf2e2278f3d55d59bba16c3270
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 12:49:02 2021 -0400
+
+    Fixed all warnings in good-life.c, ends output after 100 generations. On
+    top of that, no more garbage output, everything prints correctly.
+
+commit 615029dfb93cc2f1f138b9aa376985c7837e70ff
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 12:03:46 2021 -0400
+
+    Fixed errors in Activity 1-B. Debug files not included yet in Commit.
+
+commit 3946e1c2992af37578676f514b829ee2ee3afafe
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 11:31:11 2021 -0400
+
+    Fix 1: stopped crashes caused by using %s instead of the actual %c on lines 145 and 157.
+
+commit 450ee4a5ece7dc3af5563a74ba6368e33eb17aaf
+Author: John V Skorcik <jvs1328@cs.rit.edu>
+Date:   Thu Sep 16 11:07:38 2021 -0400
+
+    initial baseline commiti
