@@ -1,0 +1,157 @@
+▒▒▒▒
+
+
+@@UUUU▒▒▒▒
+w▒▒▒v▒▒▒
+▒YUUUU▒/▒▒▒YUU
+UUQUUUU
+
+generation: 13578
+
+
+▒u▒
+
+
+
+
+
+
+
+
+
+
+▒▒▒▒
+
+
+@@UUUU▒▒▒▒
+w▒▒▒v▒▒▒
+▒YUUUU▒/▒▒▒YUU
+UUQUUUU
+
+generation: 13579
+
+
+▒u▒
+
+
+
+
+
+
+
+
+
+
+▒▒▒▒
+
+
+@@UUUU▒▒▒▒
+w▒▒▒v▒▒▒
+▒YUUUU▒/▒▒▒YUU
+UUQUUUU
+
+generation: 13580
+
+
+▒u▒
+
+
+
+
+
+
+
+
+
+
+▒▒▒▒
+
+
+@@UUUU▒▒▒▒
+w▒▒▒v▒▒▒
+▒YUUUU▒/▒▒▒YUU
+UUQUUUU
+
+generation: 13581
+
+
+▒u▒
+
+
+
+
+
+^C
+Program received signal SIGINT, Interrupt.
+0x00007ffff7ec31e7 in __GI___libc_write (fd=1, buf=0x5555555592a0, nbytes=22)
+    at ../sysdeps/unix/sysv/linux/write.c:26
+26      ../sysdeps/unix/sysv/linux/write.c: No such file or directory.
+(gdb) frame 2
+#2  0x00007ffff7e45ad1 in new_do_write (to_do=22, data=0x5555555592a0 "",
+    fp=0x7ffff7f9e6a0 <_IO_2_1_stdout_>) at libioP.h:948
+948     libioP.h: No such file or directory.
+(gdb) frame 3
+#3  _IO_new_do_write (to_do=22, data=0x5555555592a0 "",
+    fp=0x7ffff7f9e6a0 <_IO_2_1_stdout_>) at fileops.c:426
+426     fileops.c: No such file or directory.
+(gdb) frame 4
+#4  _IO_new_do_write (fp=fp@entry=0x7ffff7f9e6a0 <_IO_2_1_stdout_>,
+    data=0x5555555592a0 "", to_do=22) at fileops.c:423
+423     in fileops.c
+(gdb) frame 10
+No frame at level 10.
+(gdb) frame 5
+#5  0x00007ffff7e46013 in _IO_new_file_overflow (
+    f=0x7ffff7f9e6a0 <_IO_2_1_stdout_>, ch=10) at fileops.c:784
+784     in fileops.c
+(gdb) frame 7
+#7  0x000055555555594c in main () at good-life.c:159
+159                   puts(" ");
+(gdb) frame 8
+No frame at level 8.
+(gdb) frame 7
+#7  0x000055555555594c in main () at good-life.c:159
+159                   puts(" ");
+(gdb) backtrace
+#0  0x00007ffff7ec31e7 in __GI___libc_write (fd=1, buf=0x5555555592a0,
+    nbytes=22) at ../sysdeps/unix/sysv/linux/write.c:26
+#1  0x00007ffff7e4400d in _IO_new_file_write (
+    f=0x7ffff7f9e6a0 <_IO_2_1_stdout_>, data=0x5555555592a0, n=22)
+    at fileops.c:1176
+#2  0x00007ffff7e45ad1 in new_do_write (to_do=22, data=0x5555555592a0 "",
+    fp=0x7ffff7f9e6a0 <_IO_2_1_stdout_>) at libioP.h:948
+#3  _IO_new_do_write (to_do=22, data=0x5555555592a0 "",
+    fp=0x7ffff7f9e6a0 <_IO_2_1_stdout_>) at fileops.c:426
+#4  _IO_new_do_write (fp=fp@entry=0x7ffff7f9e6a0 <_IO_2_1_stdout_>,
+    data=0x5555555592a0 "", to_do=22) at fileops.c:423
+#5  0x00007ffff7e46013 in _IO_new_file_overflow (
+    f=0x7ffff7f9e6a0 <_IO_2_1_stdout_>, ch=10) at fileops.c:784
+#6  0x00007ffff7e3971a in __GI__IO_puts (str=0x55555555602c " ") at libioP.h:947
+#7  0x000055555555594c in main () at good-life.c:159
+(gdb) breakpoint 159
+Undefined command: "breakpoint".  Try "help".
+(gdb) brek 159
+Undefined command: "brek".  Try "help".
+(gdb) break 159
+Breakpoint 2 at 0x555555555940: file good-life.c, line 159.
+(gdb) list
+154               {
+155                   for(col = 0; col<20; col++)
+156                   {
+157                       printf("%c", life[row][col]); //Fix 1B - Output stated String, supposed to be char.
+158                   }
+159                   puts(" ");
+160               }
+161               printf("\ngeneration: %d\n", count);
+162               count++;
+163           }
+
+Errors were found at lines:
+- 61
+- 97
+- 129
+- 137
+Description of Error:
+- Assignment of '*' or ' ' weren't done correctly. Instead of (=) for assignment, it was set to (==) for
+    comparison. This would result in the print function being borked, and printing the pointer(?) for the
+    char since there was nothing in that actual space.
